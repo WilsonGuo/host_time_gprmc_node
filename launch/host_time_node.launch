@@ -1,0 +1,11 @@
+<launch>
+
+  <arg name="rtk_port" default="/dev/ttyS1"/>
+  <arg name="baud" default="9600"/>
+
+    <node pkg="host_time_gprmc_node" type="host_time_gprmc" name="host_time_gprmc" output="screen" >
+     <param name="port" value="$(arg rtk_port)"/>
+     <param name="baud" value="$(arg baud)"/>
+    </node> 
+
+</launch>
